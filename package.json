@@ -1,14 +1,33 @@
 {
-  "name": "custom-wab-widgets",
+  "name": "awab-ext-scaffold",
   "version": "0.0.0",
-  "description": "Para construir widgets  customizado para o Web App Builder",
-  "author": {
-    "name": "Imagem Professional Services"
+  "description": "Projeto para padronizar o processo de extensão e teste do AWAB",
+  "main": "gruntfile.js",
+  "directories": {
+    "test": "test"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vmachuca/awab-ext-scaffold.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmachuca/awab-ext-scaffold/issues"
+  },
+  "homepage": "https://github.com/vmachuca/awab-ext-scaffold",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-sync": "^0.2.3",
-  },
-  "dependencies": {}
+    "grunt-karma": "*",
+    "karma-chrome-launcher": "*",
+    "karma-dojo": "*",
+    "karma-firefox-launcher": "*",
+    "karma-ie-launcher": "*",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*",
+    "karma-safari-launcher": "*",
+    "karma-sinon": "*"
+  }
 }
