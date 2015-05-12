@@ -28,10 +28,9 @@ module.exports = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (props) {
       var isWin = /^win/.test(process.platform);
-
       this.props = props;
-      this.steamapp = props.awabpath.trim() + ( isWin ? '\\client\\steamapp' : '/client/steamapp');
-      this.apppath = props.awabpath.trim() + (isWin ? "\\server\\apps\\" : "/server/apps/") + props.appcode.trim();
+      this.steamapp = props.awabpath.trim().replace(/\\/gi,"/").trim() + ( isWin ? '/client/stemapp' : '/client/stemapp');
+      this.apppath = props.awabpath.trim().replace(/\\/gi,"/").trim() + (isWin ? "/server/apps/" : "/server/apps/") + props.appcode.trim();
       done();
     }.bind(this));
   },
