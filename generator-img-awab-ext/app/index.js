@@ -48,11 +48,6 @@ module.exports = yeoman.generators.Base.extend({
         { apppath: this.apppath, steamapp: this.steamapp }
       );
 
-      /*this.fs.copyTpl(
-        this.templatePath('gruntfile.js'),
-        this.destinationPath('gruntfile.js', { apppath: "aaa", steamapp: "zica" })
-      );*/
-
       this.fs.copy(
         this.templatePath('karma.conf.js'),
         this.destinationPath('karma.conf.js')
@@ -62,10 +57,6 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('src/.gitignore'),
         this.destinationPath('src/.gitignore')
       );
-    },
-
-    projectfiles: function () {
-
     }
   },
 
