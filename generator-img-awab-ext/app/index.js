@@ -27,8 +27,11 @@ module.exports = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
+      var isWin = /^win/.test(process.platform);
+
       this.props = props;
-      // para acessar alguma propriedade: this.props.someOption;
+      this.steamapp = props.awabpath.trim() + ( isWin ? '\\client\\steamapp' : '/client/steamapp');
+      this.apppath = props.awabpath.trim() + (isWin ? "\\server\\apps\\" : "/server/apps/") + props.appcode.trim();
       done();
     }.bind(this));
   },
@@ -40,10 +43,16 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('package.json')
       );
 
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('gruntfile.js'),
-        this.destinationPath('gruntfile.js')
+        this.destinationPath('gruntfile.js'),
+        { apppath: this.apppath, steamapp: this.steamapp }
       );
+
+      /*this.fs.copyTpl(
+        this.templatePath('gruntfile.js'),
+        this.destinationPath('gruntfile.js', { apppath: "aaa", steamapp: "zica" })
+      );*/
 
       this.fs.copy(
         this.templatePath('karma.conf.js'),
