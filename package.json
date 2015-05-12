@@ -24,5 +24,6 @@
     "karma-sinon": "^1.0.4",
     "sinon": "^1.14.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "readmeFilename": "README.md"
 }
