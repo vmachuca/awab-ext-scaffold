@@ -15,15 +15,11 @@ module.exports = yeoman.generators.Base.extend({
     this.log(yosay(
       'Bem-vindo ao ' + chalk.green('Imagem WebApp Builder Extension') + '  generator!'
     ));
+    this.log(chalk.yellow('O gerador visa padronizar o processo de extensão e teste.'));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Você deseja realizar o scaffold?',
-      default: true
-    }, {
       name: 'awabpath',
-      message: 'Caminho do WebAppBuilder:',
+      message: 'Caminho do WebApp Builder:',
       'default': 'C:\\Documentos\\arcgis-web-appbuilder-1.1'
     }, {
       name: 'appcode',
