@@ -13,6 +13,7 @@
     "grunt-sync": "^0.2.3",
     "jasmine-core": "^2.3.3",
     "karma": "^0.12.31",
+    "karma-coverage": "~0.1",
     "karma-chrome-launcher": "^0.1.10",
     "karma-cli": "0.0.4",
     "karma-dojo": "0.0.1",
