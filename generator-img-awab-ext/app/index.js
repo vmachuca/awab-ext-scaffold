@@ -37,16 +37,36 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     app: function () {
       this.fs.copy(
-        this.templatePath('_package.json'),
+        this.templatePath('package.json'),
         this.destinationPath('package.json')
       );
+
+      this.fs.copy(
+        this.templatePath('gruntfile.js'),
+        this.destinationPath('gruntfile.js')
+      );
+
+      this.fs.copy(
+        this.templatePath('karma.conf.js'),
+        this.destinationPath('karma.conf.js')
+      );
+
+      this.fs.copy(
+        this.templatePath('src/.gitignore'),
+        this.destinationPath('src/.gitignore')
+      );
+
+
+      /*
       this.fs.copy(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json')
       );
+      */
     },
 
     projectfiles: function () {
+      /*
       this.fs.copy(
         this.templatePath('editorconfig'),
         this.destinationPath('.editorconfig')
@@ -55,6 +75,7 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('jshintrc'),
         this.destinationPath('.jshintrc')
       );
+      */
     }
   },
 
