@@ -11,7 +11,6 @@ module.exports = yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async();
 
-    // Have Yeoman greet the user.
     this.log(yosay(
       'Bem-vindo ao ' + chalk.green('Imagem WebApp Builder Extension') + '  generator!'
     ));
@@ -29,7 +28,7 @@ module.exports = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (props) {
       this.props = props;
-      // To access props later use this.props.someOption;
+      // para acessar alguma propriedade: this.props.someOption;
       done();
     }.bind(this));
   },
@@ -55,27 +54,10 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('src/.gitignore'),
         this.destinationPath('src/.gitignore')
       );
-
-
-      /*
-      this.fs.copy(
-        this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
-      );
-      */
     },
 
     projectfiles: function () {
-      /*
-      this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
-      );
-      this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
-      );
-      */
+
     }
   },
 
